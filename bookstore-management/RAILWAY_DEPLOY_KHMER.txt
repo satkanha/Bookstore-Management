@@ -1,0 +1,26 @@
+Bookstore Management - Railway Deploy
+
+បានកែសម្រាប់ Railway:
+- PHP requirement: ^8.4 (composer.lock របស់ project មាន Symfony 8.1 ដែលត្រូវការ PHP >= 8.4.1)
+- ប្រើ npm/package-lock.json; មិនប្រើ pnpm
+- Railway Root Directory ត្រូវដាក់: /bookstore-management
+
+Railway Variables ដែលត្រូវកំណត់យ៉ាងហោចណាស់:
+APP_NAME=Bookstore Management
+APP_ENV=production
+APP_DEBUG=false
+APP_KEY=<generate with: php artisan key:generate --show>
+APP_URL=<Railway generated domain>
+
+Database (បើប្រើ MySQL):
+DB_CONNECTION=mysql
+DB_HOST=<Railway MySQL host>
+DB_PORT=3306
+DB_DATABASE=<database name>
+DB_USERNAME=<username>
+DB_PASSWORD=<password>
+
+ក្រោយ Deploy ជោគជ័យ:
+Settings > Networking > Generate Domain
+
+សំខាន់: កុំ upload/commit .env ដែលមាន secret ទៅ GitHub។
