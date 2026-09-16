@@ -1,0 +1,89 @@
+.static-page-banner {
+    background: linear-gradient(135deg, rgba(18, 48, 74, .96), rgba(29, 71, 102, .92));
+    color: #fff;
+    border-radius: .85rem;
+    overflow: hidden;
+}
+
+.static-page-banner .text-muted {
+    color: rgba(255, 255, 255, .76) !important;
+}
+
+.admin-chart {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: end;
+    gap: .75rem;
+    min-height: 13rem;
+    padding-top: 1rem;
+}
+
+.admin-chart__bar {
+    display: flex;
+    min-height: 3rem;
+    align-items: end;
+    justify-content: center;
+    border-radius: .55rem .55rem .25rem .25rem;
+    background: linear-gradient(180deg, var(--bookstore-amber-2), var(--bookstore-amber));
+    color: #111827;
+    font-size: .75rem;
+    font-weight: 800;
+    box-shadow: 0 .55rem 1.1rem rgba(216, 146, 22, .22);
+}
+
+.admin-chart__label {
+    margin-top: .45rem;
+    text-align: center;
+    font-size: .78rem;
+    color: var(--bookstore-muted);
+}
+
+.status-dot {
+    width: .55rem;
+    height: .55rem;
+    display: inline-block;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+.book-cover--sm {
+    width: 3.2rem;
+}
+
+.clickable-row {
+    cursor: pointer;
+}
+
+.text-clamp-2 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.hero-band .btn-outline-light:hover {
+    color: var(--bookstore-navy);
+}
+
+.demo-credential {
+    border: 1px dashed rgba(216, 146, 22, .55);
+    background: rgba(216, 146, 22, .1);
+    border-radius: .65rem;
+}
+
+.empty-state {
+    border: 1px dashed var(--bookstore-border);
+    border-radius: .85rem;
+    background: #fff;
+}
+
+.form-hint {
+    color: var(--bookstore-muted);
+    font-size: .875rem;
+}
+
+@media (max-width: 575.98px) {
+    .admin-chart {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

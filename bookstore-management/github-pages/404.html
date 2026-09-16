@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirecting - Bookstore Management</title>
+</head>
+<body>
+    <script>
+        const parts = window.location.pathname.split('/').filter(Boolean);
+        const onGithubPages = window.location.hostname.endsWith('github.io');
+        const base = onGithubPages && parts.length ? `/${parts[0]}/` : '/';
+        const routeParts = onGithubPages ? parts.slice(1) : parts;
+        const route = routeParts.length ? routeParts.join('/') : '';
+        window.location.replace(`${base}#/${route}${window.location.search || ''}`);
+    </script>
+    <p>Redirecting to the Bookstore Management demo...</p>
+</body>
+</html>
