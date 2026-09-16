@@ -76,7 +76,7 @@ class Book extends Model
     protected function coverUrl(): Attribute
     {
         return Attribute::get(fn (): string => $this->cover_image
-            ? Storage::url($this->cover_image)
+            ? Storage::disk('public')->url($this->cover_image)
             : asset('images/book-placeholder.svg'));
     }
 }

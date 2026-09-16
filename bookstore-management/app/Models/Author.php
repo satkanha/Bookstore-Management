@@ -43,7 +43,7 @@ class Author extends Model
     protected function photoUrl(): Attribute
     {
         return Attribute::get(fn (): string => $this->photo
-            ? Storage::url($this->photo)
+            ? Storage::disk('public')->url($this->photo)
             : asset('images/author-placeholder.svg'));
     }
 }
